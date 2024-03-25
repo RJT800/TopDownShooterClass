@@ -5,7 +5,11 @@ using UnityEngine;
 public class HealthBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private float _health; 
+    private float _maxHealth;
+    [SerializeField]
+    private float _health;
+
+
 
     public float Health
     {
@@ -14,6 +18,9 @@ public class HealthBehaviour : MonoBehaviour
             return _health;
         }
     }
+
+    public float MaxHealth { get => _maxHealth; }
+
 
     /// <summary>
     /// Subtracts the given damage value from the health
