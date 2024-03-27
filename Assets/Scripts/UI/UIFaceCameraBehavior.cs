@@ -8,6 +8,6 @@ public class UIFaceCameraBehavior : MonoBehaviour
     {
         Transform cam = Camera.main.transform;
         transform.LookAt(transform.position + cam.forward);
-        Vector3 directionFromCamera = transform.position - cam.position;
+        //Vector3 directionFromCamera = transform.position - cam.forward;
     }
 }

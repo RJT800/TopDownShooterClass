@@ -11,6 +11,9 @@ public class HealthBarUIBehavior : MonoBehaviour
     [SerializeField]
     private HealthBehaviour _healthBehavior;
 
+    [SerializeField]
+    private Gradient _healthBarGradient;
+
     private float _maxHealth;
 
     
@@ -42,7 +45,8 @@ public class HealthBarUIBehavior : MonoBehaviour
         newScale.x = healthPercentage;
         _healthBarFG.rectTransform.localScale = newScale;
 
-
+        //set health bar color
+        _healthBarFG.color = _healthBarGradient.Evaluate(healthPercentage);
         
     }
 }
